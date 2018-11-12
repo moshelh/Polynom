@@ -49,6 +49,20 @@ Polynom p5=new Polynom("-1.5x^2+6-8.5x");
 p5.derivative();
 System.out.println("the derivative of polynom p5 is:"+p5.derivative().toString());
 
+Polynom p111=new Polynom("3x^2-x^3+x-1");
+String ss1=p111.toString();
+Polynom p222=new Polynom("x^2+x+1");
+
+p111.derivative();
+System.out.println(p111);
+Polynom expected2=new Polynom("-3.0*x^2+6.0*x+1.0");
+System.out.println(p111.equals(expected2));
+
+Polynom expected=(Polynom) p111.copy();
+System.out.println(expected.toString());
+String s33=expected.toString();
+String s44=p111.toString();
+System.out.println(s33.equals(s44));
 
 
 	

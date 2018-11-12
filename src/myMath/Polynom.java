@@ -298,10 +298,23 @@ public class Polynom implements Polynom_able{
 	
 	public double area(double x0, double x1, double eps) {
 		//sum the area of each part,every time go forward by eps,using Riemann's Integral.
+		
 		double sum=0;
 		for(double i = x0;i<x1;i+=eps)
 		{
-			sum= sum+this.f(i)*eps;
+			if (this.f(i)>0)
+			sum= sum+(this.f(i))*eps;
+		}
+		return sum;
+	}
+	public double areaUnderXaxis(double x0, double x1, double eps) {
+		//sum the area of each part,every time go forward by eps,using Riemann's Integral.
+		
+		double sum=0;
+		for(double i = x0;i<x1;i+=eps)
+		{
+			if (this.f(i)<0)
+			sum= sum+Math.abs(this.f(i))*eps;
 		}
 		return sum;
 	}
@@ -383,4 +396,5 @@ public class Polynom implements Polynom_able{
 			arrMonom.sort(comp);       //sort by comp which was already defined in the monom comperator.
 		}
 	}
+	
 }

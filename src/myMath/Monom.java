@@ -135,4 +135,11 @@ public class Monom implements function{
 		return monomS;
 		
 		}
+	
+	public boolean equals(Monom m1) {
+		if((this.get_coefficient()==m1.get_coefficient())&&(this.get_power()==m1.get_power()))
+			return true;
+		return false;
 	}
+	}
+	

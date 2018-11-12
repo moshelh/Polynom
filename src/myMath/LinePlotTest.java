@@ -20,27 +20,32 @@ public class LinePlotTest extends JFrame {
 
         DataTable data = new DataTable(Double.class, Double.class);
         DataTable data1 = new DataTable(Double.class, Double.class);
+        //testing with polynom.
         Polynom p=new Polynom("0.2x^4-1.5x^3+3x^2-x-5");
+        System.out.println("the vertex are:");
+  
         for (double x = -2.0; x <= 6.0; x+=0.25) {
             double y=p.f(x);
+            //finding the vertex
             if ((p.derivative().f(x)>0)&&(p.derivative().f(x)<0.5)) {
             	data1.add(x,y);
             	
-            	System.out.println(x+" "+"+"+" "+y);
+            	System.out.println("x="+x+","+"y="+y);
             }else {
-            data.add(x, y);
-            System.out.println(data.getColumnCount()+" "+data.getRowCount());
-           
+            data.add(x, y); 
             }
         }
-       // System.out.println(data.getColumn(1).get(10)+" "+data.getRow(10).get(1));
-       
-        XYPlot plot = new XYPlot(data);
+        //print the area under the x axis ,using the function from the polynom.
+       System.out.println("the area under x axis is:"+p.areaUnderXaxis(-0.94064,4.83104 , 0.01));
+        XYPlot plot = new XYPlot(data,data1);
         getContentPane().add(new InteractivePanel(plot));
         LineRenderer lines = new DefaultLineRenderer2D();
         plot.setLineRenderers(data, lines);
+        
        Color color = new Color(0.0f, 0.3f, 1.0f);
+       Color color1 = new Color(0.0f, 0.3f, 1.0f);
        plot.getPointRenderers(data).get(0).setColor(color.RED);
+       plot.getPointRenderers(data1).get(0).setColor(color.BLACK);
        plot.getLineRenderers(data).get(0).setColor(color);  
     }
     public static void main(String[] args) {
