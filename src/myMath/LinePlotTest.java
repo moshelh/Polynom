@@ -16,7 +16,7 @@ import de.erichseifert.gral.plots.colors.*;
 /**
  * plotting  polynom graph and in addition prints the area under x axis.
  * source:http://trac.erichseifert.de/gral/wiki/Tutorials/XYPlot
- *
+ *@author ariel & moshe
  */
 public class LinePlotTest extends JFrame {
     public LinePlotTest() {
