@@ -95,4 +95,5 @@ public interface Polynom_able extends cont_function{
 	 * @return the area
 	 */
 	public Iterator<Monom> iteretor();
+	
 }
