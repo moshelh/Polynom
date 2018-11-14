@@ -8,7 +8,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+/**
+ * Junit for the polynom
+ * @author ariel and moshe
+ *
+ */
 class PolynomTest {
 Polynom p1=new Polynom("3x^2-x^3+x-1");
 Polynom p2=new Polynom("x^2+x+1");

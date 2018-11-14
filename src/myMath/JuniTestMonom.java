@@ -9,7 +9,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+/**
+ * Junit for the monom.
+ * @author ariel and moshe
+ *
+ */
 class JuniTestMonom {
    Monom m1=new Monom(3,2);
    Monom m2=new Monom(3,2);
