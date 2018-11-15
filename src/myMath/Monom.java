@@ -14,7 +14,7 @@ public class Monom implements function{
 	 * 
 	 * @param a is the coefficient
 	 * @param b is the power of the monom.
-	 * @exception in a case the power is negative.
+	 * 
 	 */
 	public Monom(double a, int b){
 		if (b<0) throw new RuntimeException(); //the power can not be smaller than zero.

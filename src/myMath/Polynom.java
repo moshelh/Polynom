@@ -25,7 +25,7 @@ import myMath.Monom;
  * 2. Finding a numerical value between two values (currently support root only f(x)=0).
  * 3. Derivative
  * 
- * @author Moshe&&Arial
+ * @author Moshe and Arial
  * @version 1.0
  *
  */
